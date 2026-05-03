@@ -1,0 +1,29 @@
+%-----------------------------------------------------------------------
+\section{Governing Equations}
+%-----------------------------------------------------------------------
+
+The flow is governed by the incompressible Navier--Stokes equations.
+The continuity equation enforces conservation of mass:
+\begin{equation}
+    \nabla \cdot \mathbf{u} = 0,
+\end{equation}
+and the momentum equation governs the evolution of the velocity field:
+\begin{equation}
+    \frac{\partial \mathbf{u}}{\partial t}
+    + \left(\mathbf{u} \cdot \nabla\right)\mathbf{u}
+    = -\frac{1}{\rho}\nabla p + \nu \nabla^2 \mathbf{u},
+\end{equation}
+where $\mathbf{u}$ is the velocity vector, $p$ is the pressure, $\rho$ is the fluid density, and $\nu = \mu/\rho$ is the kinematic viscosity.
+
+The key dimensionless parameters governing the flow are:
+\begin{align}
+    \text{Reynolds number:}  \quad & Re  = \frac{U_\infty D}{\nu},                          \\[6pt]
+    \text{Drag coefficient:} \quad & C_d = \frac{F_d}{\frac{1}{2}\rho U_\infty^2 D},        \\[6pt]
+    \text{Lift coefficient:} \quad & C_l = \frac{F_l}{\frac{1}{2}\rho U_\infty^2 D},        \\[6pt]
+    \text{Strouhal number:}  \quad & St  = \frac{f D}{U_\infty},
+\end{align}
+where $U_\infty$ is the freestream velocity, $D$ is the characteristic length (height of the triangle), $F_d$ and $F_l$ are the drag and lift forces per unit span, and $f$ is the vortex shedding frequency.
+
+Based on the literature~\cite{kumardalal2006}, the expected flow behavior across the Reynolds number range of interest is as follows.
+At low Reynolds numbers ($Re \lesssim 50$), the flow is expected to be steady with a symmetric attached wake. As the Reynolds number increases beyond the critical threshold, the wake becomes unstable and periodic vortex shedding develops, characterized by the alternating shedding of vortices known as a von K\'{a}rm\'{a}n
+vortex street. At $Re \sim 100$--$200$, the flow is fully unsteady and periodic, with both orientations exhibiting shedding but with markedly different $C_d$ and $St$ values due to differences in frontal geometry and separation point location.
