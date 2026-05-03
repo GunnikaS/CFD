@@ -1,0 +1,27 @@
+%-----------------------------------------------------------------------
+\section{Introduction}
+%-----------------------------------------------------------------------
+
+The flow past bluff bodies is a canonical problem in fluid mechanics,
+with applications ranging from structural engineering to heat exchanger
+design. While circular and square cylinders have been extensively
+studied, triangular cylinders offer an interesting geometric variant
+due to their asymmetric wake behavior that depends strongly on
+orientation relative to the incoming flow.
+
+In this study, we simulate incompressible laminar flow past a
+triangular cylinder in two orientations: vertex facing upstream and
+flat face facing upstream. Using the open-source CFD solver
+OpenFOAM~7 with the \texttt{icoFoam} solver, we investigate how
+orientation affects the drag coefficient $C_d$, lift coefficient
+$C_l$, vortex shedding frequency (Strouhal number $St$), and wake
+structure across a range of Reynolds numbers. Results are validated
+against the published benchmark data of Kumar De and
+Dalal~\cite{kumardalal2006}.
+
+Because extensive benchmark data exist for circular and square
+cylinders, and targeted data exist for triangular cylinders, this
+study provides an opportunity to gain confidence in our numerical
+predictions through direct comparison with published results, while
+also examining the effect of bluff body geometry on the key flow
+quantities.
