@@ -1,0 +1,19 @@
+Time Convergence Study
+
+A time convergence study was performed for the vertex-up triangular cylinder at Re = 100 using
+three time step sizes: delta_t = 0.05 (coarse), delta_t = 0.025 (medium), and delta_t = 0.0125
+(fine). All simulations used the same coarse mesh and were run until the flow reached a fully
+periodic state, as indicated by the sustained oscillations in the lift coefficient Cl.
+
+The time-averaged drag coefficient Cd and Strouhal number St were extracted from the periodic
+portion of each simulation. The results are summarized below:
+
+  delta_t = 0.05:   Cd = 3.60,  St = 0.1618
+  delta_t = 0.025:  Cd = 3.54,  St = 0.1669
+  delta_t = 0.0125: Cd = 3.43,  St = 0.1690
+
+Both Cd and St exhibit monotonic convergence as the time step is refined. The change in St
+between delta_t = 0.025 and delta_t = 0.0125 is less than 0.002, indicating that the solution
+is approaching a time-step-independent result. Based on this analysis, delta_t = 0.025 is
+selected for subsequent simulations as it provides a good balance between accuracy and
+computational cost, with the Courant number remaining below 0.5 throughout the run.
